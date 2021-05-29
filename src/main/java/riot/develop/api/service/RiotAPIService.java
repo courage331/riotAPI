@@ -26,7 +26,7 @@ public class RiotAPIService {
 
     public ResponseVO findSummoner(String summonerName) {
         ResponseVO responseVO = new ResponseVO();
-        String AccessKey = "RGAPI-c3d02e5d-f506-4f63-85cb-a86337fd1cce";
+        String AccessKey = "";
         String url = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name";
         Map<String,String> param = new HashMap<>();
         param.put("summonerName",summonerName);
