@@ -15,10 +15,17 @@ public class RiotAPIController {
     @Autowired
     RiotAPIService riotAPIService;
 
-    @RequestMapping(method = RequestMethod.GET, value="/test")
-    public ResponseVO TestController(@RequestParam(value="summonerName") String summonerName){
+    @RequestMapping(method = RequestMethod.GET, value="/summoner")
+    public ResponseVO findSummonerName(@RequestParam(value="summonerName") String summonerName){
 
         ResponseVO responseVO = riotAPIService.findSummoner(summonerName);
+        return responseVO;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value="/matches")
+    public ResponseVO findRecentMatches(@RequestParam(value="summonerName") String summonerName){
+
+        ResponseVO responseVO = riotAPIService.showRecentMatches(summonerName);
         return responseVO;
     }
 }

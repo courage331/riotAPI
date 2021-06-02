@@ -1,4 +1,4 @@
-package riot.develop.api.vo;
+package riot.develop.api.vo.summoner;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
